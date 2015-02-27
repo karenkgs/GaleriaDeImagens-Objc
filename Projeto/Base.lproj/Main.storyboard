@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFf-vC-FbI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Galeria de imagens" id="2Fp-E2-72C"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLV-Yi-nDI">
+                                <rect key="frame" x="227" y="178" width="147" height="30"/>
+                                <state key="normal" title="Imagens inspiradoras">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openInspiradoras:" destination="vXZ-lx-hvc" eventType="touchDown" id="LRi-SD-nWf"/>
+                                    <segue destination="KVz-qx-een" kind="show" identifier="Inspiradoras" id="n3p-UO-f6L"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clique para ver imagens inspiradoras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-9J-WLk">
+                                <rect key="frame" x="196" y="203" width="208" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42Q-pZ-c09">
+                                <rect key="frame" x="229" y="410" width="143" height="30"/>
+                                <state key="normal" title="Imagens engraçadas">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openEngracadas:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Boz-N4-pCX"/>
+                                    <segue destination="KVz-qx-een" kind="show" identifier="Engracadas" id="jHE-Xk-Ps3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clique para ver imagens engraçadas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4S-bW-fmX">
+                                <rect key="frame" x="198" y="436" width="204" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgEngracadas" destination="42Q-pZ-c09" id="9bM-Tr-7wT"/>
+                        <outlet property="imgInspiradoras" destination="FLV-Yi-nDI" id="cUI-lz-ShY"/>
+                        <outlet property="lblEngracadas" destination="D4S-bW-fmX" id="wuG-al-WrS"/>
+                        <outlet property="lblInspiradoras" destination="7jl-9J-WLk" id="JlK-x7-q8r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="305"/>
+        </scene>
+        <!--Galeria View Controller-->
+        <scene sceneID="m9W-MQ-kRh">
+            <objects>
+                <viewController id="KVz-qx-een" customClass="GaleriaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gmx-J0-oLa"/>
+                        <viewControllerLayoutGuide type="bottom" id="a1u-kT-aHx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zU9-PH-W4r">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwM-Hv-8mG">
+                                <rect key="frame" x="146" y="70" width="308" height="140"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vw8-Vm-dLr">
+                                <rect key="frame" x="146" y="254" width="308" height="140"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0b-6H-zhU">
+                                <rect key="frame" x="146" y="437" width="308" height="140"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-rl-vgR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Galeria" id="9pc-6p-y9A">
+                                        <barButtonItem key="leftBarButtonItem" title="Voltar" style="plain" id="weV-jK-OfX">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ovJ-lt-uXd">
+                                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Voltar">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="voltarAction:" destination="KVz-qx-een" eventType="touchUpInside" id="h61-E8-Sfo"/>
+                                                    <segue destination="46a-jH-CPO" kind="unwind" unwindAction="voltar:" id="pHn-OV-PyP"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="FirstImage" destination="bwM-Hv-8mG" id="8d6-8N-9k6"/>
+                        <outlet property="secondImage" destination="vw8-Vm-dLr" id="qbw-zq-1Ja"/>
+                        <outlet property="thirdImage" destination="U0b-6H-zhU" id="Ikd-fF-vlB"/>
+                        <outlet property="voltar" destination="ovJ-lt-uXd" id="kQx-BH-dNP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HH-gy-GAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="46a-jH-CPO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1657" y="305"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jHE-Xk-Ps3"/>
+    </inferredMetricsTieBreakers>
+</document>
