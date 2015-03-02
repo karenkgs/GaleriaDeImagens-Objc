@@ -12,4 +12,6 @@
 
 -(void)setImages:(NSString *)parameter;
 
+-(void)showImages;
+
 @end

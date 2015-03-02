@@ -16,13 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFf-vC-FbI">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uFf-vC-FbI">
+                                <rect key="frame" x="0.0" y="23" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Galeria de imagens" id="2Fp-E2-72C"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLV-Yi-nDI">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLV-Yi-nDI">
                                 <rect key="frame" x="227" y="178" width="147" height="30"/>
                                 <state key="normal" title="Imagens inspiradoras">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,13 +32,13 @@
                                     <segue destination="KVz-qx-een" kind="show" identifier="Inspiradoras" id="n3p-UO-f6L"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clique para ver imagens inspiradoras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-9J-WLk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Clique para ver imagens inspiradoras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jl-9J-WLk">
                                 <rect key="frame" x="196" y="203" width="208" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42Q-pZ-c09">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42Q-pZ-c09">
                                 <rect key="frame" x="229" y="410" width="143" height="30"/>
                                 <state key="normal" title="Imagens engraçadas">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,7 +48,7 @@
                                     <segue destination="KVz-qx-een" kind="show" identifier="Engracadas" id="jHE-Xk-Ps3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clique para ver imagens engraçadas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4S-bW-fmX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Clique para ver imagens engraçadas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4S-bW-fmX">
                                 <rect key="frame" x="198" y="436" width="204" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -56,6 +56,13 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="FLV-Yi-nDI" secondAttribute="centerX" constant="-0.5" id="Qxg-TG-sLN"/>
+                            <constraint firstAttribute="centerX" secondItem="D4S-bW-fmX" secondAttribute="centerX" id="WMr-d5-eeO"/>
+                            <constraint firstItem="uFf-vC-FbI" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="YBE-cf-uiQ"/>
+                            <constraint firstAttribute="centerX" secondItem="42Q-pZ-c09" secondAttribute="centerX" constant="-0.5" id="pVs-RQ-aGT"/>
+                            <constraint firstAttribute="centerX" secondItem="7jl-9J-WLk" secondAttribute="centerX" id="wUF-YY-CQP"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imgEngracadas" destination="42Q-pZ-c09" id="9bM-Tr-7wT"/>
@@ -66,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="305"/>
+            <point key="canvasLocation" x="585" y="391"/>
         </scene>
         <!--Galeria View Controller-->
         <scene sceneID="m9W-MQ-kRh">
@@ -80,16 +87,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwM-Hv-8mG">
-                                <rect key="frame" x="146" y="70" width="308" height="140"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vw8-Vm-dLr">
-                                <rect key="frame" x="146" y="254" width="308" height="140"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0b-6H-zhU">
-                                <rect key="frame" x="146" y="437" width="308" height="140"/>
-                            </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-rl-vgR">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-rl-vgR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="Galeria" id="9pc-6p-y9A">
@@ -109,20 +107,32 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LO1-Gb-4ID">
+                                <rect key="frame" x="117" y="60" width="367" height="157"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LnZ-2h-gff">
+                                <rect key="frame" x="117" y="423" width="367" height="157"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LkV-C7-MOA">
+                                <rect key="frame" x="117" y="239" width="367" height="157"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fAI-rl-vgR" firstAttribute="width" secondItem="zU9-PH-W4r" secondAttribute="width" id="iSV-CO-uto"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="FirstImage" destination="bwM-Hv-8mG" id="8d6-8N-9k6"/>
-                        <outlet property="secondImage" destination="vw8-Vm-dLr" id="qbw-zq-1Ja"/>
-                        <outlet property="thirdImage" destination="U0b-6H-zhU" id="Ikd-fF-vlB"/>
+                        <outlet property="viewOne" destination="LO1-Gb-4ID" id="h1h-I5-Tl9"/>
+                        <outlet property="viewThree" destination="LnZ-2h-gff" id="osD-K4-E1g"/>
+                        <outlet property="viewTwo" destination="LkV-C7-MOA" id="vdo-fN-TCj"/>
                         <outlet property="voltar" destination="ovJ-lt-uXd" id="kQx-BH-dNP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HH-gy-GAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="46a-jH-CPO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1657" y="305"/>
+            <point key="canvasLocation" x="1334" y="391"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
